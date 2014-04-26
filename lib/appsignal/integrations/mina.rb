@@ -1,7 +1,7 @@
 require 'mina'
 require 'mina/hooks'
 
-before_mina :deploy, :'appsignal:mina_deploy'
+after_mina :deploy, :'appsignal:mina_deploy'
 
 namespace :appsignal do
   task :mina_deploy do
